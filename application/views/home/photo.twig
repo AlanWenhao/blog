@@ -1,0 +1,51 @@
+{% extends "home.layout.twig" %}
+{% block browserTitle %}{{ title }}{% endblock %}
+{% block keywords %}{{ keywords }}{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+{% block content %}
+	<div class="c-board"></div>
+    
+    <div class="container o-margin-bottom--30">
+    	<div class="row">
+	    	
+	    		<!-- <div class="col-md-6" style="display:inline-block;vertical-alian:middle;">
+	    			<h3 class="text-center">{{ photo.title }}</h3>
+	    			<div style="height:350px;background:url(/public/uploads/{{ photo.media }}) no-repeat center center;background-size:cover;"></div>
+	        		<img style="width: 100%;" src="/public/uploads/{{ photo.media }}">
+	    		</div> -->
+	    	{%  for photo in photos %}
+	    		<div class="project-list col-md-6">
+	    			<h3 class="text-center">{{ photo.title }}</h3>
+					<div class="project">
+						<div class="project__card">
+							<a href="" class="project__image">
+								<!-- <img src="images/1.jpg" width=600 height=400 alt=""></a> -->
+								<div style="height:350px;background:url(/public/uploads/{{ photo.media }}) no-repeat center center;background-size:cover;"></div>
+							</a>
+							<div class="project__detail">
+								<h2 class="project__title"><a href="#">Project Name</a></h2>
+								<small class="project__category"><a href="#">Photography</a></small>
+							</div>
+						</div>
+					</div>
+				</div>
+	    	{% endfor %}
+    	</div>
+    </div>
+    {{ html|raw }}
+    <script>
+		$(document).ready(function(){
+			$(".project").hover3d({
+				selector: ".project__card",
+				shine: true,
+			});
+
+			$(".movie").hover3d({
+				selector: ".movie__card",
+				shine: true,
+				sensitivity: 20,
+			});
+		});
+
+	</script>   
+{% endblock %}

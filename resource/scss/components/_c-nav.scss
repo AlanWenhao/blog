@@ -1,0 +1,18 @@
+// the style of nav part
+#c-nav {
+	margin-bottom: 0;
+
+	border: 0;
+	background: $color-white;
+	
+	.c-nav__btn {
+		border-radius: 4px;
+		font-weight: 500;
+	}
+
+	.c-nav__btn:hover {
+		background: #fd9a9a;
+		color: red;
+		transition: all .7s;
+	}
+}

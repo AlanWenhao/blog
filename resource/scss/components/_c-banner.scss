@@ -1,0 +1,113 @@
+.c-banner {
+	height: 700px;
+	position: relative;
+
+	background: $color-black;
+	overflow: hidden;
+
+
+	&__turn {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.scale-in {
+		animation: scaleIn 2s forwards;
+	}
+
+	.scale-out {
+		animation: scaleOut 2s forwards;
+	}
+	
+	&__turn-one {
+		background: url('../img/banner-bg3.jpg') no-repeat center center;
+		background-size: cover;
+	}
+
+	&__turn-two {
+		background: url('../img/banner-bg1.jpg') no-repeat center center;
+		background-size: cover;
+	}
+
+	&__layer {
+		height: 100%;
+		background: rgba(0,0,0,0.2);
+	}
+
+	&__title {
+		padding-top: 200px;
+		
+		font-size: 60px;
+		line-height: 80px;
+		color: $color-white;
+		text-shadow: 0 0 10px white;
+	}
+
+	&__des {
+		line-height: 40px;
+
+		font-size: 20px;
+		color: $color-white;
+	}
+
+	&__buttons {
+		text-align: center;
+	}
+
+	&__button {
+		display: inline-block;
+		width: 140px;
+		height: 40px; 
+		margin: 10px;
+
+		line-height: 36px;
+		border-radius: 2px;
+		cursor: pointer;
+		transition: all .5s;
+	}
+
+	&__button-about {
+		border: 2px solid $color-gray-light;
+		background: $color-gray-light;
+		&:hover {
+			background: transparent;
+			color: $color-white;
+		}
+	}
+
+	&__button-contact {
+		border: 2px solid $color-blue;
+		background: $color-blue;
+		&:hover {
+			background: transparent;
+			border: 2px solid $color-gray-light;
+			color: $color-white;
+
+		}
+	}
+}
+
+@keyframes scaleIn {
+	from {
+		transform: scale(0.95);
+		opacity: 0.2;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes scaleOut {
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	to {
+		transform: scale(1.05);
+		opacity: 0
+	}
+}

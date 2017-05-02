@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head> 
+<meta charset="UTF-8">
+<title>{% block browserTitle %}{% endblock %}</title>
+<meta name="keywords" content="{% block keywords %}{% endblock %}"/>
+<meta name="description" content="{% block description %}{% endblock %}" />
+<link rel="stylesheet" href="/public/css/main.min.css">
+<link rel="stylesheet" href="/public/css/plugin.min.css">
+<script src="/public/js/plugin.min.js"></script>
+<script src="/public/js/main.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default" id="c-nav">
+    <div class="container" id="top-anchor">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand text-bold">logo</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="text-center c-nav__btn" href="/">首页</a></li>
+                <li><a class="text-center c-nav__btn" href="/blog">文章</a></li>
+                <li><a class="text-center c-nav__btn" href="/photo">摄影</a></li>
+                <li><a class="text-center c-nav__btn" href="/course">作品展示</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block content %}
+{% endblock %}
+<!-- 联系我们 -->
+<div class="section c-portion__contact" id="contact">
+    <div class="c-portion__contact-cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 c-portion__contact-text  wow fadeInLeft">
+                    <h3 class="c-portion__contact-letter">
+                        <span class="glyphicon glyphicon-send"></span>
+                        &nbsp;
+                        联系我们
+                    </h3>
+                    <p class="c-portion__contact-letter">
+                        测试文字，测试文字测试文字测试文字测试文字，测试文字测试文字测试文字测试文字测试文字测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字，测试文字测试文字测试文字测试文字测试文字，测试文字测试文字测试文字测试文字！
+                    </p>
+                    <address class="c-portion__contact-letter">
+                        <p>
+                            <span class="glyphicon glyphicon-home"></span>
+                            &nbsp;
+                            地址:杭州市滨江区南环路XX号
+                        </p>
+                        <p>
+                            <span class="glyphicon glyphicon-phone-alt"></span>
+                            &nbsp;
+                            联系电话：0541-5643***
+                        </p>
+                        <p>
+                            <span class="glyphicon glyphicon-envelope"></span>
+                            &nbsp;
+                            邮箱:zwh@orientation.com
+                        </p>
+                    </address>
+                </div>
+                <div class="col-md-6  wow fadeInRight">
+                    <form class="row"  method="post" id="contact-form">
+                        <div class="col-md-6 c-portion__input">
+                            <input name="contact[name]" type="text" class="c-portion__input-child form-control" placeholder="您的姓名" required="required"/>
+                        </div>
+                        <div class="col-md-6 c-portion__input">
+                            <input name="contact[email]" type="email" class="c-portion__input-child form-control" placeholder="您的邮箱" required="required"/>
+                        </div>
+                        <div class="col-md-12 c-portion__input">
+                            <input name="contact[title]" type="text" class="c-portion__input-child form-control" placeholder="标题"/>
+                        </div>
+                        <div class="col-md-12 c-portion__input">
+                            <textarea name="contact[description]" class="c-portion__input-child form-control" placeholder="留言内容" rows="4"></textarea>
+                        </div>
+                        <div class="col-md-8 c-portion__input">
+                            <input type="submit" id="contact-sub" class="c-portion__input-child c-portion__submit" value="提交"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="o-footer">
+    <div class="container">
+        <span>Copyright &right; 20XX-20XX www.xxxx.com &nbsp; XXXX号备案</span>
+    </div>
+</footer>
+<div class="o-to-top scroll-btn wow rollIn" data-scroll="top-anchor">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+</div>
+<script>
+    $("#contact-sub").click(function () {
+        $.post("/contact", $("#contact-form").serialize(), function (ret) {
+            if(ret.result) {
+                alert("成功")
+            } else{
+                alert("失败")
+            }
+        },'json');
+    })
+</script>
+</body>
+</html>
+
+

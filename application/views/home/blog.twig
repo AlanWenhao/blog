@@ -1,0 +1,86 @@
+{% extends "home.layout.twig" %}
+{% block browserTitle %}{{ title }}{% endblock %}
+{% block keywords %}{{ keywords }}{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+{% block content %}
+    <div class="c-banner">
+        <div class="c-banner__turn c-banner__turn-one c-banner__turn-current"></div>
+        <div class="c-banner__turn c-banner__turn-two"></div>
+        <div class="c-banner__layer">
+            <div class="container">
+                <h2 class="c-banner__title text-center wow fadeInUp
+					data-wow-duration="0.7"
+                >
+                personal website
+                </h2>
+                <p class="c-banner__des text-center wow fadeIn"
+                   data-wow-duration="1.6s" data-wow-delay="0.7s"
+                >
+                    think smart , make your own style
+                </p>
+                <div class="col-md-12 c-banner__buttons center-block wow fadeIn"
+                     data-wow-duration="1.6s" data-wow-delay="1s">
+                    <a class="roll-bar c-banner__button-about c-banner__button scroll-btn"
+                       data-scroll="introduce">about website</a>
+                    <a class="roll-bar c-banner__button-contact c-banner__button scroll-btn"
+                       data-scroll="contact">contact me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="c-listing" id="introduce">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for article in articles %}
+                        <article class="c-listing__group">
+                            <div class="c-listing__title-group">
+                                <h3 class="c-listing__title text-center">{{ article.title }}</h3>
+                                <p class="c-listing__from">
+                                    出处：<a href="##">{{ article.author }}</a>
+                                    <span class="c-listing__time">{{ article.post }}</span>
+                                </p>
+                            </div>
+                            <div class="c-listing__text">
+                                {{ article.abstract }}
+                            </div>
+                            <a class="c-listing__button" href="/blog/{{ article.id_article }}">阅读全文</a>
+                            <div class="c-listing__type">
+                                <span class="glyphicon glyphicon-tags"></span>
+                                <strong class="c-listing__type-text">{{ article.type }}</strong>
+                            </div>
+                        </article>
+                    {% endfor %}
+                    <!-- <nav class="text-center" aria-label="...">
+                        <ul class="pagination">
+                          <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                          <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                          <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a></li>
+                        </ul>
+                    </nav> -->
+                    {{ html|raw }}
+                </div>
+                <div class="col-md-4">
+                    <aside class="c-listing__aside">
+                        <h3 class="c-listing__aside-title">栏目</h3>
+                        <div class="c-listing__aside-contain">
+                            <p>这是一个描述</p>
+                            <p>这是一个描述</p>
+                            <p>这是一个描述</p>
+                        </div>
+                    </aside>
+                    <aside class="c-listing__aside">
+                        <h3 class="c-listing__aside-title">栏目</h3>
+                        <div class="c-listing__aside-contain">
+                            <p>这是一个描述</p>
+                            <p>这是一个描述</p>
+                            <p>这是一个描述</p>
+                            <p>这是一个描述</p>
+                            <p>这是一个描述</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+.c-article {
+	background: $color-gray-mid;
+
+	&__page {
+		margin-top: 30px;
+		margin-bottom: 50px;
+		padding: 1px 15px 10px 15px;
+
+		background: $color-white;
+	}
+}

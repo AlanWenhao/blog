@@ -1,0 +1,178 @@
+{% extends "home.layout.twig" %}
+{% block browserTitle %}{{ title }}{% endblock %}
+{% block keywords %}{{ keywords }}{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+{% block content %}
+    <!-- banner -->
+    <div class="c-banner">
+        <div class="c-banner__turn c-banner__turn-one"></div>
+        <div class="c-banner__turn c-banner__turn-two"></div>
+        <div class="c-banner__layer">
+            <div class="container">
+                <h2 class="c-banner__title text-center wow fadeInUp
+					data-wow-duration="0.7"
+                >
+                personal website
+                </h2>
+                <div class="c-banner__des text-center wow fadeInUp"
+                     data-wow-duration="1s" data-wow-delay="0.7s"
+                >
+                    think smart , make your own style
+                </div>
+                <div class="col-md-12 c-banner__buttons center-block wow fadeIn"
+                     data-wow-duration="1.6s" data-wow-delay="1s">
+                    <a class="roll-bar c-banner__button-about c-banner__button scroll-btn"
+                       data-scroll="introduce">about website</a>
+                    <a class="roll-bar c-banner__button-contact c-banner__button scroll-btn"
+                       data-scroll="contact">contact me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- intr -->
+    <div class="c-intr">
+        <div class="container">
+            <div class="row wow fadeInUp" data-wow-duration=".7s">
+                <div class="col-md-4 text-center c-intr__con">
+                    <a href="##">
+                        <img class="c-intr__img" src="/public/img/intr1.png" alt="">
+                        <h4 class="c-intr__title">文字标题</h4>
+                    </a>
+                    <p class="c-intr__text">文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容</p>
+                </div>
+                <div class="col-md-4 text-center c-intr__con">
+                    <a href="##">
+                        <img class="c-intr__img" src="/public/img/intr2.png" alt="">
+                        <h4 class="c-intr__title">文字标题</h4>
+                    </a>
+                    <p class="c-intr__text">文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容</p>
+                </div>
+                <div class="col-md-4 text-center c-intr__con">
+                    <a href="##">
+                        <img class="c-intr__img" src="/public/img/intr3.png" alt="">
+                    </a>
+                    <h4 class="c-intr__title">文字标题</h4>
+                    <p class="c-intr__text">文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 技术文章 -->
+    <div class="section c-portion" id="introduce">
+        <div class="container c-portion__head">
+            <div class="row">
+                <div class="container">
+                    <h3 class="text-center">技术文章</h3>
+                    <p class="text-center">技术内容介绍技术内容介绍技术内容介绍</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-7">
+                <img class="c-portion__blog-pic1 hidden-xs wow fadeInUp"
+                     src="/public/img/blog-intr2.png" alt=""
+                     data-wow-duration="1s" data-wow-delay="0.5s">
+                <img class="c-portion__blog-pic2 hidden-xs wow fadeInUp"
+                     src="/public/img/blog-intr1.png" alt=""
+                     data-wow-duration="1s" data-wow-delay="0.8s">
+            </div>
+            <div class="col-md-5 c-portion__description wow fadeInRight"
+                 data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="c-portion__lable">some descriptions</div>
+                <h4>the main title of this part</h4>
+                <p>the detail descriptions for this part...the detail descriptions for this part...the detail descriptions for this part...the detail descriptions for this part...</p>
+            </div>
+        </div>
+    </div>
+    <!-- 摄影文章 -->
+    <div class="section c-portion">
+        <div class="container c-portion__head">
+            <div class="row">
+                <div class="container">
+                    <h3 class="text-center">摄影文章</h3>
+                    <p class="text-center">技术内容介绍技术内容介绍技术内容介绍</p>
+                </div>
+            </div>
+        </div>
+        <div class="container c-portion__photo-wrap wow fadeIn" data-wow-duration="3s">
+            <div class="col-md-3 col-sm-6 c-portion__photo">
+                <div class="c-portion__photo-pic">
+                    <div class="c-portion__photo-layer">
+                        <div class="c-portion__photo-button">
+                            <span class="c-portion__photo-btn-text glyphicon glyphicon-eye-open"></span>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-center c-portion__photo-title">the tiele of photo</h4>
+                <p>the description of this photo...the description of this photo...the description of this photo...</p>
+            </div>
+            <div class="col-md-3 col-sm-6 c-portion__photo">
+                <div class="c-portion__photo-pic">
+                    <div class="c-portion__photo-layer"></div>
+                </div>
+                <h4 class="text-center c-portion__photo-title">the tiele of photo</h4>
+                <p>the description of this photo...the description of this photo...the description of this photo...</p>
+            </div>
+            <div class="col-md-3 col-sm-6 c-portion__photo">
+                <div class="c-portion__photo-pic"></div>
+                <h4 class="text-center c-portion__photo-title">the tiele of photo</h4>
+                <p>the description of this photo...the description of this photo...the description of this photo...</p>
+            </div>
+            <div class="col-md-3 col-sm-6 c-portion__photo">
+                <div class="c-portion__photo-pic"></div>
+                <h4 class="text-center c-portion__photo-title">the tiele of photo</h4>
+                <p>the description of this photo...the description of this photo...the description of this photo...</p>
+            </div>
+            <div class="col-md-3 col-sm-6 c-portion__photo">
+                <div class="c-portion__photo-pic"></div>
+                <h4 class="text-center c-portion__photo-title">the tiele of photo</h4>
+                <p>the description of this photo...the description of this photo...the description of this photo...</p>
+            </div>
+            <div class="col-md-3 col-sm-6 c-portion__photo">
+                <div class="c-portion__photo-pic"></div>
+                <h4 class="text-center c-portion__photo-title">the tiele of photo</h4>
+                <p>the description of this photo...the description of this photo...the description of this photo...</p>
+            </div>
+            <div class="col-md-3 col-sm-6 c-portion__photo">
+                <div class="c-portion__photo-pic"></div>
+                <h4 class="text-center c-portion__photo-title">the tiele of photo</h4>
+                <p>the description of this photo...the description of this photo...the description of this photo...</p>
+            </div>
+            <div class="col-md-3 col-sm-6 c-portion__photo">
+                <div class="c-portion__photo-pic"></div>
+                <h4 class="text-center c-portion__photo-title">the tiele of photo</h4>
+                <p>the description of this photo...the description of this photo...the description of this photo...</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- 网站脉络 -->
+    <div class="section c-portion">
+        <div class="container">
+            <div class="row">
+                <div class="container c-portion__head">
+                    <h3 class="text-center">技术文章</h3>
+                    <p class="text-center">技术内容介绍技术内容介绍技术内容介绍</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="c-portion__slider col-sm-8 col-sm-offset-2">
+                <div class="swiper-container wow fadeInDown">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %} 

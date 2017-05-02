@@ -1,0 +1,58 @@
+{% extends "admin.home.layout.twig" %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block content %}
+<div class="form-container contact-detail">
+    <div class="form-section-title">
+        <span>姓名</span>
+        <div class="ad-line"></div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-5">
+                <p>{{contactModel.name}} </p>
+            </div>
+        </div>
+    </div>
+    <div class="form-section-title">
+        <span>邮件</span>
+        <div class="ad-line"></div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-5">
+                <p>{{contactModel.email}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="form-section-title">
+        <span>标题</span>
+        <div class="ad-line"></div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-5">
+                <p>{{contactModel.title}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="form-section-title">
+        <span>内容</span>
+        <div class="ad-line"></div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-5">
+                <p>{{contactModel.description}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="text-right">
+            <div class="ad-line"></div>
+            <a href="/admin/contact/manage">
+                    <button class="btn btn-cancel btn-lg btn-pad-lg" type="button">返回</button>
+            </a>
+    </div>
+</div>
+{% endblock %}

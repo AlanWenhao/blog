@@ -1,0 +1,13 @@
+{
+  "name": "jquery-spellchecker",
+  "version": "0.2.4-ignored",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt qunit"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.16"
+  }
+}

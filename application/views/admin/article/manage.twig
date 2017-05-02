@@ -1,0 +1,50 @@
+{% extends "admin.home.layout.twig" %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block content %}
+<div class="form-container">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th class="sortable" style="width: 20%">标题</th>
+				<th class="sortable" style="width: 20%">作者</th>
+				<th class="sortable" style="width: 20%">类型</th>
+                <th class="sortable" style="width: 20%">发布时间</th>
+                <th class="sortable" style="width: 20%">修改</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for article in articles %}
+			<tr>
+                <td>{{ article.title }}</td>
+				<td>{{ article.author }}</td>
+                <td>{{ article.type }}</td>
+				<td>{{ article.post }}</td>
+                <td>
+                    <span class="table-manage-icon table-edit-icon">
+                        <a href="/admin/article/edit?id_article={{ article.id_article }}"></a>
+                    </span>
+                    <span class="table-manage-icon table-del-icon">
+                        <a url="/admin/article/delete?id_article={{ article.id_article }}" href="javascript:;"></a>
+                    </span>
+                </td>
+			</tr>
+			{% endfor %}  
+		</tbody>
+	</table>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.table-del-icon').click(function(){
+            var sector = $(this);
+            showPop('删除文章!', '确定要删除这个文章?', '是', '否', function(){
+                var url = sector.find('a').attr('url');
+                window.location.href=url;	
+            }, closePop);
+        });
+    });
+</script>
+{% endblock %}

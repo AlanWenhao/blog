@@ -1,0 +1,4 @@
+[03-Nov-2015 04:59:29 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/corporatesooperi/public_html/adminer.php on line 13
+[03-Nov-2015 04:59:49 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/corporatesooperi/public_html/adminer.php on line 13
+[03-Nov-2015 05:00:33 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/corporatesooperi/public_html/adminer.php on line 13
+[29-Aug-2016 03:27:23 America/Montreal] PHP Fatal error:  Class 'Contact_Model' not found in /home/steggos1/public_html/application/controllers/Home.php on line 50

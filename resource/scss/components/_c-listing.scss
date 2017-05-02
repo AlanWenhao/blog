@@ -1,0 +1,81 @@
+.c-listing {
+	padding-bottom: 50px;
+
+	background: $color-gray-mid;
+
+	&__group {
+		padding: 0 35px 10px;
+		margin-top: 30px;
+
+		background: $color-white;
+		border-top: 1px solid $color-white;
+		&:hover {
+			box-shadow: 0 0 20px $color-gray-dark;
+			transition: all 0.5s;
+		}
+	}
+
+	&__title {
+		font-size: 26px;
+	}
+
+	&__from {
+		text-align: center;
+	}
+
+	&__time {
+		color: red;
+	}
+
+	&__text {
+		margin-top: 20px;
+		margin-bottom: 30px;
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+
+	&__button {
+		display: block;
+		width: 80px;
+		height: 32px;
+		margin-bottom: 15px;
+
+		text-align: center;
+		line-height: 30px;
+		color: $color-white;
+		background: $color-red;
+		border: 2px solid $color-red;
+		border-radius: 2px;
+		cursor: pointer;
+		transition: all .5s;
+		&:hover {
+			background: transparent;
+			color: $color-red;
+		}
+	}
+
+	&__type {
+		line-height: 30px;
+	}
+
+	&__type-text {
+		margin-top: -3px;
+
+		font-weight: normal;
+		color: gray;
+	}
+
+	&__aside {
+		margin-top: 30px;
+		padding: 0 30px 10px;
+
+		border-top: 1px solid $color-white;
+		background: $color-white;
+	}
+
+	&__aside-contain {
+		padding-top: 10px;
+
+		border-top: 1px solid gray;
+	}
+}

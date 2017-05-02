@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link href="{{ base_url('public/css/plugin.min.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="/public/js/plugin.min.js" ></script>
+    {% block link_css %}{% endblock %}
+    {% block link_script %}{% endblock %}
+  </head>
+  <body class="admin-body">
+        <div id="left-menu">
+            <div id="admin-logo">
+			<img src="{{ base_url('public/images/logo-steggos.png') }}" />
+            </div>
+            <div id="menu-box">
+		        <ul class="list-unstyled">
+                    <li>
+                        <p id="home-index"><a href="/admin">主页</a></p>
+                        <div class="menu-line"></div>
+                    </li>
+                    <li>
+                        <p><a href="javascript:;">文章</a></p>
+                        <div class="menu-line"></div>
+                        <ul class="sub-menu list-unstyled">
+                            <li>
+                                <p id="article-edit"><a href="/admin/article/edit">添加文章</a></p>
+                                <li class="menu-line"></li>
+                            </li>
+                            <li>
+                                 <p id="article-manage"><a href="/admin/article/manage">管理文章</a></p>
+                                <li class="menu-line"></li>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="javascript:;">摄影</a></p>
+                        <div class="menu-line"></div>
+                        <ul class="sub-menu list-unstyled">
+                            <li>
+                                <p id="photo-edit"><a href="/admin/photo/edit">添加摄影</a></p>
+                            <li class="menu-line"></li>
+                            </li>
+                            <li>
+                                <p id="photo-manage"><a href="/admin/photo/manage">管理摄影</a></p>
+                            <li class="menu-line"></li>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p id="home-index"><a href="/admin/contact/manage">联系我们</a></p>
+                        <div class="menu-line"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="right-container">
+            <div id="right-content">
+                <div id="right-header">
+                    <div id="nav-title">
+                        {% block title %}{% endblock %}
+                    </div>
+                    <div id="admin-info">
+                        <li><a href="/admin/adminHome/logout" tabindex="-1">退出</a></li>
+                    </div>
+                </div>
+
+                <div id="right-editable" class="clearfix">
+                        {% block content %}{% endblock %}
+                </div>
+            </div>
+	    </div>
+  </body>
+</html>
+<script type="text/javascript">
+window.onload = function(){
+        autoHeight();
+}
+$(document).ready(function(){
+        {% if selected %}
+            $('#{{ selected }}').parent('li').addClass('menu-active');
+            $('#{{selected }}').addClass('menu-active');
+            $('#{{selected }}').parent().parent('.sub-menu').show();
+        {% endif %}
+        $('.admin-drop-down').click(function(){
+                $(this).find('.dropdown-menu').slideToggle();
+        })
+});
+$('#menu-box > ul > li > p').click(function(){
+    $(this).parent().find('.sub-menu').slideToggle("slow");
+    autoHeight();
+})
+ function autoHeight(){
+        var leftHeight = $('#left-menu').outerHeight();
+        var windowHeight = document.documentElement.clientHeight;
+        var rightHeight =  $('#right-container').outerHeight(true);
+        maxHeight = ( leftHeight > windowHeight ? leftHeight: windowHeight) > rightHeight ? ( leftHeight > windowHeight ? leftHeight : windowHeight ) : rightHeight;
+        //$('#left-menu').outerHeight(maxHeight);
+        $('#left-menu').css('min-height', maxHeight)
+        //$('#right-editable').outerHeight(maxHeight-65);
+        $('#right-editable').css('min-height', maxHeight-65);
+        adjustLeftHeight();
+}
+function adjustLeftHeight(){
+        var menuHeight = $('#left-menu').height()-65;
+        var	leftHeight = $('.comment-left').height();
+        var rightHeight = $('.comment-right').height()+20;
+
+        maxHeight = ( menuHeight > leftHeight ? menuHeight : leftHeight ) > rightHeight ? ( menuHeight > leftHeight ? menuHeight : leftHeight ) : rightHeight;
+        $('.comment-left').css('min-height', maxHeight);
+}
+</script>

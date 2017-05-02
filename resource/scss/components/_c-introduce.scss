@@ -1,0 +1,24 @@
+.c-intr {
+	margin-top: 40px;
+	&__con {
+		padding: 40px 0 20px;
+
+		border-radius: 6px;
+	}
+
+	&__con:hover {
+		transition: all .5s ease-out;
+		background: #eee;
+		-webkit-box-shadow:0 0 10px rgba(0, 204, 204, .5);  
+		box-shadow:0 0 10px rgba(0, 204, 204, .7);  
+	}
+
+	&__img {
+		margin-bottom: 8px;
+	}
+
+	&__text {
+		padding: 0 25px;
+	}
+
+}
