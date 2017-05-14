@@ -96,7 +96,7 @@ class Twig
 	{
             
 		$CI =& get_instance();
-                $view = $this->checkRequest($view);
+                // $view = $this->checkRequest($view);
                 // hack
                 $params = array_merge($this->preParams, $params);
                 

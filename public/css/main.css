@@ -48,7 +48,7 @@ a:hover {
     transition: all .7s; }
 
 .c-banner {
-  height: 700px;
+  height: 750px;
   position: relative;
   background: #333;
   overflow: hidden; }
@@ -70,7 +70,7 @@ a:hover {
     height: 100%;
     background: rgba(0, 0, 0, 0.2); }
   .c-banner__title {
-    padding-top: 200px;
+    padding-top: 170px;
     font-size: 60px;
     line-height: 80px;
     color: #fff;
@@ -97,6 +97,7 @@ a:hover {
       background: transparent;
       color: #fff; }
   .c-banner__button-contact {
+    color: #fff;
     border: 2px solid #39a5ed;
     background: #39a5ed; }
     .c-banner__button-contact:hover {
@@ -207,6 +208,7 @@ a:hover {
   color: white; }
 
 .c-portion__contact-letter {
+  margin-top: 24px;
   padding-left: 15px; }
 
 .c-portion__input {
