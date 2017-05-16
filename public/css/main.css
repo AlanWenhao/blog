@@ -135,6 +135,10 @@ a:hover {
   .c-intr__text {
     padding: 0 25px; }
 
+.c-portion__main-title {
+  font-size: 26px;
+  font-weight: bold; }
+
 .c-portion__head {
   margin-top: 30px;
   margin-bottom: 30px; }
@@ -149,6 +153,10 @@ a:hover {
   right: 120px;
   top: 0; }
 
+.c-portion__blog-title {
+  margin-top: 5px;
+  margin-bottom: 20px; }
+
 .c-portion__description {
   padding-top: 110px; }
 
@@ -158,13 +166,13 @@ a:hover {
 
 .c-portion__photo-pic {
   height: 180px;
-  background: url("../img/pic-demo.jpg") no-repeat;
   background-size: cover; }
 
 .c-portion__photo-layer {
   height: 100%;
   position: relative;
   background: #333;
+  opacity: 0;
   transition: all .5s; }
   .c-portion__photo-layer:hover {
     opacity: 1;
@@ -173,10 +181,11 @@ a:hover {
 .c-portion__photo-title {
   width: 100%;
   display: inline-block;
+  margin-top: 18px;
   text-align: center; }
 
 .c-portion__photo-button {
-  width: 40px;
+  width: 100px;
   height: 40px;
   border-radius: 50%;
   margin: 0 auto;
@@ -192,8 +201,9 @@ a:hover {
   cursor: pointer; }
 
 .c-portion__slider {
-  height: 300px;
   margin-bottom: 80px; }
+  .c-portion__slider img {
+    width: 100%; }
 
 .c-portion__contact {
   background: url("../img/map-bg.jpg") no-repeat;
@@ -275,6 +285,8 @@ a:hover {
     margin-bottom: 30px;
     font-size: 16px;
     letter-spacing: 1px; }
+  .c-listing__img-cover img {
+    width: 100%; }
   .c-listing__button {
     display: block;
     width: 80px;
@@ -307,8 +319,8 @@ a:hover {
     border-top: 1px solid gray; }
 
 .c-board {
-  height: 300px;
-  background: blue; }
+  height: 400px;
+  background: #EAEAC8; }
 
 .c-article {
   background: #ebebeb; }

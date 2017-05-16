@@ -35,9 +35,9 @@ gulp.task('cssplugin', function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src('./resource/img/**/*')
+  return gulp.src('./resource/img/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('/public/img'))
+    .pipe(gulp.dest('./public/img'));
     // .pipe(notify({ message: 'Images task complete' }));
 });
 
